@@ -1,0 +1,131 @@
+  /* ---------- Base & layout ---------- */
+  :root{
+    --bg: #ffffff;
+    --text: #111;
+    --muted: #444;
+    --accent: #000; /* black & white friendly */
+    --card-shadow: rgba(0,0,0,0.06);
+    --maxw: 1000px;
+    --gap: 1rem;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  *{box-sizing:border-box}
+  html {scroll-behavior: smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.45;
+    padding:24px;
+    display:flex;
+    justify-content:center;
+  }
+  .container{width:100%;max-width:var(--maxw)}
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:var(--gap);
+    margin-bottom:18px;
+  }
+  .brand{font-weight:700;font-size:1.1rem}
+  nav a{
+    color:var(--muted);
+    text-decoration:none;
+    margin-left:14px;
+    font-weight:600;
+    font-size:0.95rem;
+  }
+  nav a:hover, nav a.active{color:var(--text);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    display:flex;
+    gap:32px;
+    align-items:flex-start;
+    margin-bottom:18px;
+  }
+  .hero .left{
+    flex:1;
+  }
+  .hero h1{
+    margin:0 0 6px;
+    font-size:1.8rem;
+    letter-spacing: -0.5px;
+  }
+  .hero p.lead{margin:0;color:var(--muted)}
+  .cta{
+    margin-top:12px;
+    display:flex;
+    gap:10px;
+  }
+  .btn{
+    padding:8px 12px;
+    border:1px solid var(--accent);
+    background:transparent;
+    text-decoration:none;
+    color:var(--text);
+    font-weight:600;
+    border-radius:6px;
+  }
+  .btn.primary{background:var(--accent); color:#fff;}
+
+  /* ---------- Right column (profile card) ---------- */
+  .card{
+    width:300px;
+    border-radius:8px;
+    padding:14px;
+    box-shadow: 0 6px 18px var(--card-shadow);
+    background:#fff;
+    border:1px solid #eee;
+    flex-shrink:0;
+  }
+  .card h3{margin:0 0 6px;font-size:1.05rem}
+  .meta{font-size:0.9rem;color:var(--muted);margin-bottom:8px}
+
+  /* ---------- Sections ---------- */
+  section{margin-bottom:20px;}
+  h2{font-size:1.05rem;margin:0 0 8px}
+  hr.sep{border:0;border-top:1px solid #eee;margin:12px 0 18px}
+
+  /* ---------- Projects grid ---------- */
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:14px;
+  }
+  .project{
+    border:1px solid #eee;
+    padding:12px;
+    border-radius:8px;
+    background:#fff;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .project:hover{ transform: translateY(-6px); box-shadow:0 10px 24px rgba(0,0,0,0.06) }
+  .project h3{margin:0 0 6px;font-size:0.98rem}
+  .project p{margin:0;color:var(--muted);font-size:0.92rem}
+
+  /* ---------- Skills list ---------- */
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{padding:6px 8px;border-radius:6px;border:1px solid #ddd;font-size:0.85rem;color:var(--muted)}
+
+  /* ---------- Contact ---------- */
+  .contact{
+    display:flex;gap:18px;flex-wrap:wrap;
+  }
+  .contact a{color:var(--muted);text-decoration:none;font-weight:600}
+
+  /* ---------- Reveal animation ---------- */
+  .reveal{opacity:0; transform: translateY(12px); transition:opacity .5s ease, transform .5s ease}
+  .reveal.show{opacity:1; transform:none}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    .hero{flex-direction:column}
+    .card{width:100%}
+    .grid{grid-template-columns: 1fr}
+    header{flex-direction:column;align-items:flex-start;gap:8px}
+  }
+
+
