@@ -37,5 +37,5 @@ If you want to connect with me:
 
 **Name:** Raj Soni  
 **GitHub:** https://github.com/Rajsoni233  
-**Email:** soniraj23062003@gmail.com (add if you want)
+**Email:** soniraj23062003@gmail.com 
 
